@@ -51,14 +51,14 @@ client.on("message", async msg => {
           await msg.channel.bulkDelete(msgs)
           await msg.channel.send(`Bulked ${msgs.size-=1} message.`).then(msg => {
             msg.delete(4000)
-          })
-        })
+          });
+        });
     } catch (e) {
       console.log(e.stack)
     }
     }
   }
-})
+});
 
 
 
